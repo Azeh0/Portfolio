@@ -1,6 +1,6 @@
 /* Reset some default styles */
 body, h1{
-background-color: rgb(214, 214, 214);
+background-color: rgb(255, 255, 255);
 }
 
 body, h1, h2, p {
@@ -36,9 +36,8 @@ body, h1, h2, p {
   }
   
   .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+    display: flex; /* Change to flex display for closer squares */
+    gap: 10px; /* Adjust gap between iframes */
   }
   
   .square {
