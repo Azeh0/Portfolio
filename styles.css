@@ -37,6 +37,7 @@ body, h1, h2, p {
   
   .grid {
     display: flex; /* Change to flex display for closer squares */
+    justify-content: center;
     gap: 10px; /* Adjust gap between iframes */
   }
   
