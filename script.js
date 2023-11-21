@@ -16,6 +16,8 @@ window.convertToAffiliate = function() {
       iframe.src = convertedLink;
       iframe.setAttribute('width', '120');
       iframe.setAttribute('height', '240');
+      iframe.setAttribute('scrolling', 'no'); // Add scrolling="no" attribute
+      iframe.style.overflow = 'hidden'; // Add overflow: hidden; CSS property
       iframe.style.border = 'none';
 
       const amazonLinksDiv = document.getElementById('amazonLinks');

@@ -1,13 +1,11 @@
 body::-webkit-scrollbar {
   display: none;
  }
-
-body {
+ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  
  }
 body, h1{
 background-color: rgb(255, 255, 255);
@@ -49,6 +47,7 @@ body, h1, h2, p {
     display: flex; /* Change to flex display for closer squares */
     justify-content: center;
     gap: 10px; /* Adjust gap between iframes */
+    scrollbar-width: none;
   }
   
   .square {
@@ -107,10 +106,19 @@ body, h1, h2, p {
   display: flex;
   justify-content: center;
   gap: 10px; /* Adjust gap between iframes */
+  scrollbar-width: none;
 }
 
-.amazon-links .grid iframe {
-  width: 120px;
-  height: 240px;
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  scrollbar-width: none;
+ }
+ 
+ .grid iframe {
+  overflow: hidden;
   border: none;
-}
+ }
+
+
