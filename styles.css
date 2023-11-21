@@ -1,5 +1,4 @@
-/* Reset some default styles */
-body, h1{
+base, h1{
 background-color: rgb(255, 255, 255);
 }
 
@@ -92,4 +91,4 @@ body, h1, h2, p {
     color: #333;
     font-size: 14px;
   }
-  
+
