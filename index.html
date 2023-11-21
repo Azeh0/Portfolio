@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Homepage</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
 </head>
 <body>
   <header>
@@ -21,13 +22,13 @@
       <h2>Affiliate Link Converter</h2>
       <div class="converter-form">
         <input type="text" id="amazonLinkInput" placeholder="Enter Amazon link...">
-        <button onclick="convertToAffiliate()">Convert</button>
+        <button id="convertButton">Convert</button>
       </div>
       <div class="converted-link" id="convertedLink"></div>
     </div>
   
       <!-- Amazon Links -->
-      <div class="amazon-links">
+      <div class="amazon-links" id="amazonLinks"></div>
         <div class="grid">
         <iframe src="//rcm-na.amazon-adsystem.com/e/cm?..." style="width:120px;height:240px;"></iframe>
         <!-- Add other iframes similarly -->
@@ -39,7 +40,9 @@
       <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-na.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=azevedo014-20&language=en_CA&o=15&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B07Y1YKLNQ&linkId=2dff8062164db89a437a8f24bc9fa925"></iframe>
       <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-na.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=azevedo014-20&language=en_CA&o=15&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0733ZCSR9&linkId=726f0954a0f548529db09a922abe074a"></iframe>
       <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-na.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=azevedo014-20&language=en_CA&o=15&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B09KYK1S9R&linkId=02ad00e0bbe8f833e1fa23953100a523"></iframe>
+
     </div>
   </main>
+  
 </body>
 </html>
