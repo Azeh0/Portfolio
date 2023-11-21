@@ -1,0 +1,16 @@
+{
+  "name": "your-package-name",
+  "version": "1.0.0",
+  "description": "Your package description",
+  "homepage": "http://{username}.github.io/{repo-name}",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.2"
+  }
+}
