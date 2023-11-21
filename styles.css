@@ -37,6 +37,7 @@ body, h1, h2, p {
   
   .grid {
     display: flex; /* Change to flex display for closer squares */
+    justify-content: center;
     gap: 10px; /* Adjust gap between iframes */
   }
   
@@ -51,5 +52,44 @@ body, h1, h2, p {
     font-family: Arial, sans-serif;
     font-weight: bold;
     font-size: 40px;
+  }
+
+  .affiliate-converter {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .affiliate-converter h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .converter-form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .converter-form input {
+    flex: 1;
+    padding: 8px;
+    margin-right: 10px;
+  }
+  
+  .converter-form button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .converted-link a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
   }
   
