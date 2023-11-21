@@ -28,13 +28,12 @@ window.convertToAffiliate = function() {
 }
 
 function extractASIN(link) {
-  const asinMatch = link.match(/\/(dp|gp\/product|exec\/obidos\/ASIN)\/(\w{10}|\w{9})(\/|\?|$)/);
-  return asinMatch ? asinMatch[2] : '';
+  const asinMatch = link.match(/\/(?:dp|gp\/product|exec\/obidos|aw\/d)\/(B[0-9A-Z]{9}|\w{10})(\/|\?|$)/);
+  return asinMatch ? asinMatch[1] : '';
 }
-
 function extractLinkID(link) {
   const linkIdMatch = link.match(/coliid=([\w\d]{10})/);
-  return linkIdMatch ? linkIdMatch[1] : '';
+  return linkIdMatch ? linkIdMatch[1] : null;
 }
 
 document.addEventListener('DOMContentLoaded', function() {
