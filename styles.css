@@ -28,6 +28,8 @@ body::-webkit-scrollbar {
  .about {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
  }
  
  @media (max-width: 768px) {
@@ -40,6 +42,8 @@ body::-webkit-scrollbar {
   max-width: 200px;
   height: auto;
   margin-right: 20px;
+  align-items: center;
+  justify-content: center;
  }
  
  .about-text {
