@@ -127,8 +127,8 @@ body::-webkit-scrollbar {
   justify-content: center;
   gap: 10px;
   scrollbar-width: none;
-  display: grid;
-  grid-template-columns: 1fr;
+  padding: 20px;
+  margin-bottom: 20px;
  }
  
  .grid iframe {
