@@ -154,4 +154,9 @@ body::-webkit-scrollbar {
   margin-bottom: 10px;
   scrollbar-width: none;
  }
+ @media (min-width: 768px) {
+  .grid {
+   grid-template-columns: 1fr 1fr;
+  }
+ }
  
