@@ -5,7 +5,7 @@ body::-webkit-scrollbar {
  body {
   margin: 0;
   padding: 0;
-  overflow-y: auto; /* Change from 'hidden' to 'auto' */
+  overflow-y: auto;
  }
  
  body, h1 {
@@ -27,7 +27,13 @@ body::-webkit-scrollbar {
  
  .about {
   display: flex;
-  align-items: center;
+  flex-direction: row;
+ }
+ 
+ @media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+  }
  }
  
  .about img {
@@ -38,6 +44,7 @@ body::-webkit-scrollbar {
  
  .about-text {
   flex: 1;
+  text-align: center;
  }
  
  /* Main content styles */
