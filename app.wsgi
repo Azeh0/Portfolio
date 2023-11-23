@@ -66,5 +66,7 @@ def convert():
 
     return jsonify({"amazon_ca_link": amazon_ca_link}), 200
 
+application = app
+
 if __name__ == '__main__':
     app.run(debug=True)
