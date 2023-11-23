@@ -1,11 +1,11 @@
 console.log('JavaScript code is loaded and executed');
 
 function extractASIN(link) {
-  const asinMatch = link.match(/\/(?:dp|gp\/product|exec\/obidos|aw\/d)\/(B[0-9A-Z]{9}|\w{10})|a\.co\/(?:[^\/]+\/)?(dp|gp\/product|exec\/obidos|aw\/d)\/(\w{10})/);
+  const asinMatch = link.match(/(\/dp\/|\/gp\/product\/|\/exec\/obidos\/|\/aw\/d\/)([A-Z0-9]{10})/i);
   console.log('Link:', link);
   console.log('Match:', asinMatch);
   if (asinMatch) {
-    return asinMatch[1] || asinMatch[3];
+    return asinMatch[2];
   } else {
     return '';
   }
@@ -22,25 +22,6 @@ window.convertToAffiliate = function() {
   const affiliateTag = 'azevedo014-20'; // Replace with your affiliate tag
   const amazonCALinkRegex = /https?:\/\/(www\.)?amazon\.ca/;
 
-if (link.match(amazonCALinkRegex)) {
-  const asin = extractASIN(link);
-  const linkId = extractLinkID(link);
-  const convertedAffiliateLink = `//rcm-na.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=${affiliateTag}&language=en_CA&o=15&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=${asin}&linkId=${linkId}`;
-
-      const iframe = document.createElement('iframe');
-      iframe.src = convertedAffiliateLink;
-      iframe.setAttribute('width', '120');
-      iframe.setAttribute('height', '240');
-      iframe.setAttribute('align-items', 'center');
-      iframe.setAttribute('scrolling', 'no');
-      iframe.style.overflow = 'hidden';
-      iframe.style.border = 'none';
-
-      const amazonLinksDiv = document.getElementById('amazonLinks');
-      amazonLinksDiv.innerHTML = ''; // Clear previous content
-      amazonLinksDiv.appendChild(iframe);
-  }
-
   fetch('http://127.0.0.1:5000/convert', {
     method: 'POST',
     headers: {
@@ -56,9 +37,8 @@ if (link.match(amazonCALinkRegex)) {
   })
   .then(data => {
     const amazonCALink = data.amazon_ca_link;
-    
-    const asin = extractASIN(link);
-    const linkId = extractLinkID(link);
+    const asin = extractASIN(amazonCALink);
+    const linkId = extractLinkID(amazonCALink);
 
     if (amazonCALink && asin) {
       const convertedAffiliateLink = `//rcm-na.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=${affiliateTag}&language=en_CA&o=15&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=${asin}&linkId=${linkId}`;
