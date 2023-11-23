@@ -22,7 +22,7 @@ window.convertToAffiliate = function() {
   const affiliateTag = 'azevedo014-20'; // Replace with your affiliate tag
   const amazonCALinkRegex = /https?:\/\/(www\.)?amazon\.ca/;
 
-  fetch('http://127.0.0.1:5000/convert', {
+  fetch('https://azeh.pythonanywhere.com/convert', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
