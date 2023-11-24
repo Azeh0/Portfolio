@@ -11,8 +11,7 @@ CORS(app)
 
 def convert_to_amazon_ca(a_co_link):
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
-        'Accept-Language': 'en-US,en;q=0.9'
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36'
     }
     try:
         # Send a GET request to the shortened URL
@@ -65,6 +64,9 @@ def convert():
         return jsonify({"error": "Unable to convert link"}), 400
 
     return jsonify({"amazon_ca_link": amazon_ca_link}), 200
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
